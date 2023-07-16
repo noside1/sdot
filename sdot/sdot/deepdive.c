@@ -68,7 +68,7 @@ int main() {
 		double time_taken = ((double)(end - start)) * 1e3 / CLOCKS_PER_SEC;
 
 		printf("sdot = %lf \n", *sdot);
-		printf("C function took %lf ms for array size %ld \n", time_taken, ARRAY_SIZE);
+		printf("x86-64 function took %lf ms for array size %ld \n", time_taken, ARRAY_SIZE);
 
 		unsigned int err_count = 0;
 
@@ -77,7 +77,7 @@ int main() {
 				err_count++;
 		}
 
-		printf("Error count (C program): %d \n", err_count);
+		printf("Error count (x86-64 program): %d \n", err_count);
 		average += time_taken;
 	}
 	average /= 30;
