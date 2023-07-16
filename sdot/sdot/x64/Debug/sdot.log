@@ -1,0 +1,12 @@
+﻿  Performing Custom Build Tools
+  SIMDsdot.asm:15: error: parser: instruction expected
+  SIMDsdot.asm:19: error: label `extractpd' inconsistently redefined
+  SIMDsdot.asm:15: info: label `extractpd' originally defined here
+  SIMDsdot.asm:19: error: parser: instruction expected
+  SIMDsdot.asm:24: error: label `extractpd' inconsistently redefined
+  SIMDsdot.asm:19: info: label `extractpd' originally defined here
+  SIMDsdot.asm:24: error: parser: instruction expected
+  SIMDsdot.asm:28: error: label `extractpd' inconsistently redefined
+  SIMDsdot.asm:24: info: label `extractpd' originally defined here
+  SIMDsdot.asm:28: error: parser: instruction expected
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(248,5): error MSB8066: Custom build for 'SIMDsdot.asm' exited with code 1.
