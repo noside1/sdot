@@ -55,7 +55,7 @@ int main() {
 		average += time_taken;
 	}
 	average /= 30;
-	prinf("average time is %lf ms", average);
+	printf("average time is %lf ms", average);
 
 	average = 0;
 	x86sdot(ARRAY_SIZE, sdot, C, A, B);
@@ -81,7 +81,7 @@ int main() {
 		average += time_taken;
 	}
 	average /= 30;
-	prinf("average time is %lf ms", average);
+	printf("average time is %lf ms", average);
 	/*
 	SIMDsdot(ARRAY_SIZE, sdot, C, A, B);
 
