@@ -30,10 +30,11 @@ int main() {
 	}
 
 	clock_t start, end;
+	double average = 0;
 	
 	f_sdot(ARRAY_SIZE, sdot, C, A, B);
 
-	for (int j = 0; j < 1; j++) {
+	for (int j = 0; j < 30; j++) {
 		*sdot = 0;
 		start = clock();
 		f_sdot(ARRAY_SIZE, sdot, C, A, B);
@@ -51,11 +52,15 @@ int main() {
 		}
 
 		printf("Error count (C program): %d \n", err_count);
+		average += time_taken;
 	}
+	average /= 30;
+	prinf("average time is %lf ms", average);
 
+	average = 0;
 	x86sdot(ARRAY_SIZE, sdot, C, A, B);
 
-	for (int j = 0; j < 1; j++) {
+	for (int j = 0; j < 30; j++) {
 		*sdot = 0;
 		start = clock();
 		x86sdot(ARRAY_SIZE, sdot, C, A, B);
@@ -73,11 +78,14 @@ int main() {
 		}
 
 		printf("Error count (C program): %d \n", err_count);
+		average += time_taken;
 	}
-	
+	average /= 30;
+	prinf("average time is %lf ms", average);
+	/*
 	SIMDsdot(ARRAY_SIZE, sdot, C, A, B);
 
-	for (int j = 0; j < 1; j++) {
+	for (int j = 0; j < 30; j++) {
 		*sdot = 0;
 		start = clock();
 		SIMDsdot(ARRAY_SIZE, sdot, C, A, B);
@@ -98,6 +106,6 @@ int main() {
 	}
 
 	printf("%lf", C[10]);
-
+	*/
 	return 0;
 }
